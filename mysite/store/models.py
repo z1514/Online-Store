@@ -47,8 +47,8 @@ class Orders(models.Model):
 
 class OrderLineItem(models.Model):
     id = models.AutoField(primary_key=True)
-    goods = models.ForeignKey(Goods,on_delete=models.CASCADE())
-    orders = models.ForeignKey(Orders, on_delete=models.CASCADE())
+    goods = models.ForeignKey(Goods,on_delete=models.CASCADE)
+    orders = models.ForeignKey(Orders, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=0)
     subtotal = models.FloatField(default=0.0)
 
